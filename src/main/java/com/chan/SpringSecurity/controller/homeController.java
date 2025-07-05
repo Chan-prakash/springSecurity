@@ -9,7 +9,7 @@ public class homeController {
 
     @GetMapping("/home")
     public String hello(HttpServletRequest request){
-       return "Hello world"+request.getRequestedSessionId();
+       return "Hello world "+request.getRequestedSessionId();
     }
 
     @GetMapping("/about")

@@ -1,8 +1,10 @@
 package com.chan.SpringSecurity.controller;
 
 
+import com.chan.SpringSecurity.Model.User;
 import com.chan.SpringSecurity.Model.student;
 import com.chan.SpringSecurity.Repo.StudentRepo;
+import com.chan.SpringSecurity.Repo.UserRepo;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.web.csrf.CsrfToken;
@@ -19,6 +21,14 @@ public class StudentController {
 
     @Autowired
     StudentRepo repo1;
+
+    @Autowired
+    UserRepo repo;
+
+    @GetMapping("/User")
+    public List<User> getAlluser(){
+        return repo.findAll();
+    }
 
     @GetMapping("/students")
     public List<student> getAllStudent(){

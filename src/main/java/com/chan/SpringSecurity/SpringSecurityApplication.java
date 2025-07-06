@@ -11,5 +11,6 @@ public class SpringSecurityApplication {
 		SpringApplication.run(SpringSecurityApplication.class, args);
 		System.out.println("Hello world");
 	}
+	.
 
 }
